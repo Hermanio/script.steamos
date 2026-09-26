@@ -1,0 +1,63 @@
+# Kodi Media Center language file
+# Addon Name: Boot into SteamOS
+# Addon id: script.steamos
+# Addon Provider: Herman Õunapuu
+msgid ""
+msgstr ""
+"Project-Id-Version: Boot into SteamOS\n"
+"Report-Msgid-Bugs-To: https://github.com/Hermanio/script.steamos/issues\n"
+"POT-Creation-Date: 2026-09-22 00:00+0000\n"
+"PO-Revision-Date: 2026-09-22 00:00+0000\n"
+"Last-Translator: Herman Õunapuu\n"
+"Language-Team: English (United Kingdom)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_gb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30010"
+msgid "partition not visible"
+msgstr ""
+
+msgctxt "#30011"
+msgid "inactive"
+msgstr ""
+
+msgctxt "#30200"
+msgid "This machine did not start through UEFI, so its firmware has no boot menu to point at SteamOS."
+msgstr ""
+
+msgctxt "#30201"
+msgid "The kernel is not exposing EFI variables at %s."
+msgstr ""
+
+msgctxt "#30202"
+msgid "EFI variables cannot be written here. Changing the next boot needs root, which Kodi has on LibreELEC and usually does not on a desktop Linux."
+msgstr ""
+
+msgctxt "#30203"
+msgid "The firmware lists no boot entries."
+msgstr ""
+
+msgctxt "#30204"
+msgid "Could not read the boot entries: %s"
+msgstr ""
+
+msgctxt "#30205"
+msgid "Could not set the next boot entry: %s"
+msgstr ""
+
+msgctxt "#30206"
+msgid "The firmware did not keep the next boot entry."
+msgstr ""
+
+msgctxt "#30208"
+msgid "Nothing here looks like SteamOS. None of the %d boot entries loads steamcl.efi or is named like SteamOS."
+msgstr ""
+
+
+
+msgctxt "#30005"
+msgid "Which one is SteamOS?"
+msgstr ""
