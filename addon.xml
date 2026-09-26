@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.steamos"
+       name="Boot into SteamOS"
+       version="1.0.0"
+       provider-name="Herman Õunapuu">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+    </requires>
+
+    <extension point="xbmc.python.script" library="addon.py">
+        <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Restart into SteamOS for one boot</summary>
+        <description lang="en_GB">Boot into SteamOS arms the UEFI firmware's BootNext variable with the SteamOS boot entry and restarts, so a Kodi machine that dual-boots LibreELEC and SteamOS can switch to gaming from the sofa. BootNext applies to one boot only: the machine comes back to its usual system by itself, and the default boot order is never changed. The SteamOS entry is found by the partition it sits on and the loader it names, or chosen from a list when that is not decisive.</description>
+        <license>GPL-3.0-or-later</license>
+        <website>https://ounapuu.ee</website>
+        <source>https://github.com/Hermanio/script.steamos</source>
+        <email>kodi@ounapuu.ee</email>
+        <platform>linux</platform>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+            <banner>resources/banner.png</banner>
+            <clearlogo>resources/clearlogo.png</clearlogo>
+        </assets>
+        <news>1.0.0 - First release. Arms the SteamOS boot entry for the next boot and restarts, leaving the default boot order alone.</news>
+        <disclaimer lang="en_GB">Unofficial and not affiliated with Valve Corporation. Steam and SteamOS are trademarks of Valve Corporation. This add-on writes a UEFI firmware variable; on a machine whose firmware handles BootNext badly, that is a reboot you may have to undo from the firmware's own boot menu.</disclaimer>
+    </extension>
+</addon>

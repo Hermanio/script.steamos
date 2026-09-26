@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: ./run-tests.sh
+      - run: ./package.sh
+      - name: Publish the zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          zip="dist/script.steamos-${GITHUB_REF_NAME#v}.zip"
+          test -f "$zip" || { echo "tag $GITHUB_REF_NAME does not match addon.xml"; exit 1; }
+          notes="$(sed -n 's:.*<news>\(.*\)</news>.*:\1:p' addon.xml)"
+          gh release create "$GITHUB_REF_NAME" "$zip" \
+            --title "Boot into SteamOS ${GITHUB_REF_NAME#v}" --notes "$notes"

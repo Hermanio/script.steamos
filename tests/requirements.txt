@@ -1,0 +1,2 @@
+pytest>=8.0
+kodi-addon-checker>=0.0.36
